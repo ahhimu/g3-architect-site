@@ -51,6 +51,10 @@ main > section{
   margin-top: 130px;
 }
 
+.top-margin{
+  margin-top: 32px;
+}
+
 
   /* Header Related Styles */
 
@@ -142,14 +146,37 @@ main > section{
   .feature-description{
     font-size: 1rem;
     font-weight: 400;
+    text-align: justify;
   }
+  
 
 
 
 /* Mobile device First Approach  */
 @media screen and (max-width:576px) {
-    .navbar, .nav-links{
+    .navbar,
+    .nav-links,
+    .teams{
       flex-direction: column;
     }
+    .team-img-container{
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .our-features{
+      margin-left: 5px;
+    }
+  
+}
+
+/* Tablet Device Second Approch */
+
+@media screen and (min-width:577px) and (max-width:992px) {
+  .teams{
+    flex-direction: column-reverse;
+  }
+  .team-img-container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+ 
   
 }
